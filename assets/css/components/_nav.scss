@@ -5,7 +5,11 @@
     flex-direction: column;
     background-color: $background-header;
     width: 75vw;
-    height: 100vh;
+    height: -100vw;
+
+    transition: 300ms;
+    position: absolute;
+    left: 100vw;
     .menu-lateral__logo {
         align-self: center;
         width: 118px;
@@ -61,4 +65,8 @@
             content: "\e90a";
         }
     }
+}
+.menu-lateral--active {
+    left: 0;
+    transition: 300ms;
 }

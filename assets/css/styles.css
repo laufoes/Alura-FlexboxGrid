@@ -39,7 +39,10 @@ html, body {
   flex-direction: column;
   background-color: #15191C;
   width: 75vw;
-  height: 100vh;
+  height: -100vw;
+  transition: 300ms;
+  position: absolute;
+  left: 100vw;
 }
 .menu-lateral .menu-lateral__logo {
   align-self: center;
@@ -83,4 +86,9 @@ html, body {
 }
 .menu-lateral .menu-lateral__link--pinturas:before {
   content: "\e90a";
+}
+
+.menu-lateral--active {
+  left: 0;
+  transition: 300ms;
 }/*# sourceMappingURL=styles.css.map */
