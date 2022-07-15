@@ -1,0 +1,12 @@
+@import '../abstract/variaveis';
+
+@font-face {
+    font-family: 'Icones';
+    src: url('../../font/icones.ttf');
+}
+
+html, body {
+    font-family: $font;
+    background-color: $background;
+    color: $primary-color;
+}

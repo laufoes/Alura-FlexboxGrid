@@ -1,0 +1,29 @@
+@import '../abstract/variaveis';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $background-header;
+    padding: 8px 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    .header__menu {
+        i {
+            &:before {
+                content: "\e904";
+                font-size: 24px;
+            }
+        }
+    }
+    .header__logo {
+        width: 40px;
+    }
+    .header__notification {
+            i {
+                &:before {
+                content: "\e906";
+                font-size: 24px;
+            }
+        }
+    }
+}
