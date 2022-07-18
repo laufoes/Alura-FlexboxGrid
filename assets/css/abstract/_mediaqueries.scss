@@ -1,0 +1,7 @@
+@import './variaveis';
+
+@mixin largescreen {
+    @media screen and (min-width: $laptop) {
+        @content;
+    }
+}

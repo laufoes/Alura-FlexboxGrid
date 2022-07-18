@@ -1,4 +1,5 @@
 @import '../abstract/variaveis';
+@import '../abstract/mediaqueries';
 
 @font-face {
     font-family: 'Icones';
@@ -9,4 +10,8 @@ html, body {
     font-family: $font;
     background-color: $background;
     color: $primary-color;
+        @include largescreen {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
 }

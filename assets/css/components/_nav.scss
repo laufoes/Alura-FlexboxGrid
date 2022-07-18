@@ -10,6 +10,12 @@
     transition: 300ms;
     position: absolute;
     left: 100vw;
+    @include largescreen {
+        position: static;
+        width: 200px;
+        grid-column: 1; //o elemento inicia na primeira coluna
+        grid-row: 1 / span 2; //elemento inicia na primeira linha e ocupa um span de 2 linhas
+    }
     .menu-lateral__logo {
         align-self: center;
         width: 118px;

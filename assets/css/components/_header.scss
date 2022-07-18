@@ -7,6 +7,15 @@
     background-color: $background-header;
     padding: 8px 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    @include largescreen {
+        background-color: $background;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        padding: 16px 60px;
+        height: 80px;
+        box-sizing: border-box; //para garantir que a altura maxima será respeitada.
+        grid-column: 2;
+    }
     .header__menu {
         i {
             &:before {
@@ -14,9 +23,43 @@
                 font-size: 24px;
             }
         }
+        @include largescreen {
+            display: none;
+        }
     }
     .header__logo {
         width: 40px;
+        @include largescreen {
+            display: none;
+        }
+    }
+    .header__perfil {
+        display: none;
+        @include largescreen {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            column-gap: 8px;
+            align-items: center;
+            justify-self: flex-end;
+            color: $secondary-color;
+            padding: 8px 3px;
+            border-right: 1px solid $secondary-color;
+            &:before {
+                content: "";
+                display: block;
+                width: 32px;
+                height: 32px;
+                background-image: url(../img/profile_2.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            &:after {
+                content: "\e90d";
+                color: $primary-color;
+                font-size: 1.5rem;
+            }
+        }
     }
     .header__notificacao {
             i {
